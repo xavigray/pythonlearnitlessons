@@ -25,3 +25,10 @@ for value in person.values():
     print(value)    # Itarating over values
 for key, value in person.items():
     print(key, value)   # Iterating over key-value pairs
+
+
+# Dictionary methods
+# keys()
+# values()
+# items()
+# clear
