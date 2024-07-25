@@ -48,6 +48,32 @@ except IndexError:
 
 # Nested list - Grocery items with quantities
 grocery_items = [
-    ['milk',2],
-    []
+    ['milk', 2],
+    ['eggs', 1],
+    ['chesse', 3],
+    ['apples', 5]
 ]
+
+# Accessing nested list items
+print("Grocery items with quantities: ")
+for item, quantity in grocery_items:
+    print(f"{quantity} {item}{'s' if quantity > 1 else ''}")
+
+# Modify the quantity of an item
+sItem = input("Enter an item to modify its quantity: ")
+bTrueFalse = False
+for i in grocery_items:
+
+    if item == sItem:
+        iQuantity = int(input(f"Enter the new quantity for {item}: "))
+        grocery_items[i][1] = iQuantity
+        bTrueFalse = True
+
+
+if bTrueFalse:
+    print("Updated grocery items with quantities: ")
+    for item, quantity in grocery_items:
+        print(f"{quantity} {item}{'s' if quantity > 1 else ''}")
+else:
+    print(f"{sItem.capitalize()} is not in the grocery list.")
+
